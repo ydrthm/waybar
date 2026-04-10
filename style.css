@@ -4,6 +4,7 @@
     font-size: 11px;
     min-height: 0;
     margin: 0;
+    padding: 0;
 }
 
 #waybar {
@@ -13,7 +14,7 @@
 
 #workspaces {
     background: transparent;
-    margin-left: 2px;
+    margin-left: 0px;
     border: 1px solid #828282;
 }
 
@@ -55,15 +56,16 @@ button {
     color: #ffffff;
 }
 
-#network.disconnected {
-    color: #ff0000;
-}
+/* #network.disconnected { */
+/*     color: #ff0000; */
+/* } */
 
-#clock {
-}
+/* #clock { */
+/* } */
 
 #tray {
-    padding: 2px;
+    padding: 0;
+    margin: 0;
 }
 
 #battery {
@@ -85,9 +87,9 @@ button {
 #backlight {
 }
 
-#backlight.max {
-    color: #EFBF04;
-}
+/* #backlight.max { */
+/*     color: #EFBF04; */
+/* } */
 #pulseaudio {
 }
 

@@ -1,18 +1,18 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 18,
+  "spacing": 10,
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
     "pulseaudio",
     "backlight",
     // "network",
     "cpu",
     "memory",
     "custom/docker",
-    "battery",
-    "tray"
+    "battery"
     // "custom/lock",
     // "custom/power"
   ],
@@ -58,7 +58,7 @@
 	},
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["󱩎", "󱩏", "󱩑", "󱩒", "󱩔", "󰛨"]
     },
 
   "battery": {
@@ -69,10 +69,10 @@
         },
         "format": "{icon} {capacity}%",
         //"format-full": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
+        "format-charging": "{capacity}%",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰂂", "󰁹"],
+        "format-icons": ["", "", "", "", ""],
 	"tooltip-format": "{capacity}%"
 
     },
