@@ -3,9 +3,7 @@
   "position": "top",
   "spacing": 18,
   "modules-left": ["sway/workspaces"],
-
   "modules-center": ["clock"],
-
   "modules-right": [
     "pulseaudio",
     "backlight",
@@ -29,7 +27,7 @@
 
   "tray": {
     "icon-size": 16,
-    "spacing": 0
+    "spacing": 2
   },
 
   "clock": {
@@ -50,8 +48,8 @@
 
   "cpu": {
     "interval": 10,
-    "format": " {icon0}{icon1}{icon2}{icon3}{usage:>2}%",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    "format": " {usage}%"
+    // "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },
 
   "backlight": {
@@ -59,9 +57,8 @@
 		"max": 100
 	},
         // "device": "acpi_video1",
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-	"tooltip-format": "{percent}%"
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
   "battery": {
@@ -86,22 +83,21 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "headphone": "",
       "headset": "",
       "default": ["", "", ""]
     },
-    "on-click": "pavucontrol",
-    "tooltip-format": "{volume}%"
+    "on-click": "pavucontrol"
   },
 
-  "custom/power": {
-    "tooltip": false,
-    "on-click": "wlogout &",
-    "format": "⏻"
-  },
+  // "custom/power": {
+  //   "tooltip": false,
+  //   "on-click": "wlogout &",
+  //   "format": "⏻"
+  // },
 
   "custom/docker": {
     "format": "{}",
