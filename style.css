@@ -1,103 +1,117 @@
 * {
-  font-family: JetbrainsMono Nerd Font Propo;
-  font-size: 12px;
-  min-height: 0;
+    border: none;
+    font-family: JetbrainsMono Nerd Font Propo;
+    font-size: 11px;
+    min-height: 0;
+    margin: 0;
 }
 
 #waybar {
-  background: rgba(211, 211, 211, 0.4);
+    background: rgba(23, 23, 23, 1);
+    color: white;
 }
 
 #workspaces {
-  background: transparent;
-  margin-left: 4px;
+    background: transparent;
+    margin-left: 2px;
+    border: 1px solid #828282;
 }
 
 #workspaces button {
-  color: rgba( 239, 237, 227, 0.3);
-  padding-left: 2px;
-  padding-right: 2px;
+    /* color: rgba( 239, 237, 227, 0.3); */
+    color: white;
+    border-radius: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    padding-top: 2px;
 }
 
-#workspaces button.active {
-  color: #ffffff;
+#workspaces button.focused {
+    color: black;
+    background: yellow;
 }
 
 button {
-  background: transparent;
+    background: none;
 }
 
-#workspaces button:hover {
-  background: transparent;
-}
+/* #workspaces button:hover { */
+/*     background: transparent; */
+/* } */
 
 #tray,
 #backlight,
 #clock,
 #battery,
 #pulseaudio,
-#network,
+/* #network, */
 #cpu,
 #memory,
 #custom-lock,
 #custom-power,
 #custom-docker {
-  background-color: transparent;
-  color: #ffffff;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 #network.disconnected {
-  color: #ff0000;
+    color: #ff0000;
 }
+
 #clock {
 }
 
+#tray {
+    padding: 2px;
+}
+
 #battery {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 #battery.charging {
-  color: #33ff00;
+    color: #33ff00;
 }
 
 #battery.warning:not(.charging) {
-  color: #ff3300;
+    color: #EBB71A;
 }
 
 #battery.critical:not(.charging) {
-  color: #ff0000;
+    color: #ff0000;
 }
 
 #backlight {
 }
 
 #backlight.max {
-  color: #EFBF04;
+    color: #EFBF04;
 }
 #pulseaudio {
 }
 
 #custom-docker {
-  color: #85c1dc;
+    color: #85c1dc;
 }
 
-#custom-lock {
-  color: #babbf1;
-}
-
-#custom-power {
-  margin-right: 10;
-  color: #e78284;
-}
+/* #custom-lock { */
+/*     color: #babbf1; */
+/* } */
+/**/
+/* #custom-power { */
+/*     margin-right: 10; */
+/*     color: #e78284; */
+/* } */
 
 #custom-docker.docker {
-  color: #85c1dc;
+    color: #85c1dc;
 }
 
 #custom-docker.docker-none {
-  color: #737994;
+    color: #737994;
 }
 
 #custom-docker.docker-error {
-  color: #e78284;
+    color: #e78284;
 }

@@ -2,21 +2,21 @@
   "layer": "top",
   "position": "top",
   "spacing": 18,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["sway/workspaces"],
 
   "modules-center": ["clock"],
 
   "modules-right": [
     "pulseaudio",
     "backlight",
-    "network",
+    // "network",
     "cpu",
     "memory",
     "custom/docker",
-    "tray",
     "battery",
-    "custom/lock",
-    "custom/power"
+    "tray"
+    // "custom/lock",
+    // "custom/power"
   ],
 
   "hyprland/workspaces": {
@@ -29,7 +29,7 @@
 
   "tray": {
     "icon-size": 16,
-    "spacing": 10
+    "spacing": 0
   },
 
   "clock": {
@@ -39,17 +39,17 @@
     "interval": 60
   },
 
-  "network": {
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󰤫",
-    "interval": 1,
-    "tooltip-format": "{essid}{bandwidthDownBits}",
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
-  },
+  // "network": {
+  //   "format-wifi": "{icon}",
+  //   "format-ethernet": "󰈀",
+  //   "format-disconnected": "󰤫",
+  //   "interval": 15,
+  //   "tooltip-format": "{essid}{bandwidthDownBits}",
+  //   "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+  // },
 
   "cpu": {
-    "interval": 1,
+    "interval": 10,
     "format": " {icon0}{icon1}{icon2}{icon3}{usage:>2}%",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },
@@ -81,7 +81,7 @@
     },
 
   "memory": {
-    "interval": 1,
+    "interval": 15,
     "format": " {used:0.1f}G/{total:0.1f}G"
   },
 
@@ -106,8 +106,8 @@
   "custom/docker": {
     "format": "{}",
     "return-type": "json",
-    "interval": 10,
+    "interval": 30,
     "exec": "$(pwd)/scripts/docker-stats/docker-stats",
     "tooltip": true
-  },
+  }
 }
